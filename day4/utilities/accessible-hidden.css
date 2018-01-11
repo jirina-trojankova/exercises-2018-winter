@@ -1,0 +1,20 @@
+.accessible-hidden {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.accessible-hidden:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  clip: auto;
+}

@@ -1,0 +1,246 @@
+/*
+primary: #54bd8f
+light grey: #d6d6d6
+text color: #444444
+dark grey: #232323
+*/
+
+/*  Typography and basic styles
+    ******************************************************/
+
+html {
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+  
+  
+body {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #d6d6d6;
+    box-shadow: 0 0 2px rgba(180,180,180,.8);
+    color: #444;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: #54bd8f;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+/*  Header and navigation
+******************************************************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    background-color: #fff;
+}
+
+.logo-link {
+    flex-basis: 16vw;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    background-color: #232323;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li {
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap; /* prevent links with multiple words from wrapping */
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #54bd8f;
+    color: #444;
+}
+
+/*  Sections
+******************************************************/
+
+.section,
+footer {
+    padding: 3vw 6vw;
+}
+
+.section--light {
+    background-color: #fff;
+}
+
+.section--dark {
+    background-color: #232323;
+    color: #fff;
+}
+
+.section--primary {
+    background-color: #54bd8f;
+}
+
+.section--primary h1,
+.section--primary h2,
+.section--primary h3,
+.section--primary h4 {
+    color: #fff;
+}
+
+/*  Jumbotron
+    ******************************************************/
+
+.section:first-child {
+    padding-top: 2rem;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.jumbotron {
+    padding-top: 8vw;
+    padding-right: 1rem;
+    padding-bottom: 16vw;
+    padding-left: 1rem;
+    background: url('/img/jumbotron-background.jpg') center no-repeat;
+    background-size: cover;
+    margin-right: -6vw;
+    margin-left: -6vw;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.jumbotron h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.jumbotron strong {
+    color: #54bd8f;
+    /* workaround for custom text-decoration */
+    display: inline-block;
+    line-height: 1;
+    border-bottom: 8px solid #fff;
+}
+
+.jumbotron p {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.claim {
+    padding: 3vw 6vw;
+    background-color: #d6d6d6;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+/*  Promo
+    ******************************************************/
+
+.section--promo {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.section--promo article {
+    padding: 0 2.5rem;
+}
+
+@media only screen and (min-width: 500px) {
+    
+    .section--promo article {
+        flex: 1 1 50%;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    
+    .section--promo article {
+        flex: 1 1 25%;
+    }
+
+}
+
+/*  Utilities
+    ******************************************************/
+
+.accessible-hidden {
+    position: absolute;
+    top: 0;
+    left: -999px;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.accessible-hidden:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    clip: auto;
+}
+
+/* Only display content to screen readers
+Taken from Bootstrap 4: https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_screen-reader.scss
+See: http://a11yproject.com/posts/how-to-hide-content/
+See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/
+*/
+.sr-only {
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}

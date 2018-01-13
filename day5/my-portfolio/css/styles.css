@@ -1,0 +1,212 @@
+/*
+primary: #54bd8f
+light grey: #d6d6d6
+text color: #444444
+dark grey: #232323
+*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+    background-color: #d6d6d6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #54bd8f;
+}
+
+.section,
+footer {
+    padding: 3vw 6vw;
+}
+
+.section--light {
+    background-color: #fff;
+}
+
+.section--dark {
+    background-color: #232323;
+    color: #fff;
+}
+
+.section--primary {
+    background-colour: #54bd8f;
+
+}
+
+.section--primary h1,
+.section--primary h2,
+.section--primary h3,
+.section--primary h4,
+.section--dark a {
+    color: #fff; /* we are over dark background */
+}
+
+.jumbotron {
+    padding-top: 8vw;
+    padding-right: 1rem;
+    padding-bottom: 16vw;
+    padding-left: 1rem;
+    background-image: url('../img/jumbotron-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*  Header and navigation
+    ******************************************************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin: 0 1rem;
+}
+
+.logo-link img {
+    height: 24px;
+}
+
+nav {
+    background-color: #232323;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap; /* prevent text wrap in links (about me link)*/
+}
+nav a:hover,
+nav a:focus {
+    background-color: #54bd8f;
+    color: #232323;
+}
+
+/*  Promo
+    ******************************************************/
+
+.section--promo {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.section--promo article {
+    width: 100%;
+    padding: 0 2.5rem;
+}
+
+@media only screen and (min-width: 500px) {
+
+    .section--promo article {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    .section--promo article {
+        width: 25%;
+    }
+}
+/*  About me section
+    ******************************************************/
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+.about-image img{
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-text {
+    flex: 1 0 300px; /* image width */
+    max-width: 100%;
+    padding: 0 2rem;
+}
+
+/*  Utilities
+    ******************************************************/
+
+.accessible-hidden {
+    position: absolute;
+    top: 0;
+    left: -999px;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.accessible-hidden:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    clip: auto;
+}
+
+
+/* Only display content to screen readers
+Taken from Bootstrap 4: https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_screen-reader.scss
+See: http://a11yproject.com/posts/how-to-hide-content/
+See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/
+*/
+.sr-only {
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+  }

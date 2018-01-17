@@ -41,7 +41,7 @@ footer {
 }
 
 .section--primary {
-    background-colour: #54bd8f;
+    background-color: #54bd8f;
 
 }
 
@@ -58,7 +58,7 @@ footer {
     padding-right: 1rem;
     padding-bottom: 16vw;
     padding-left: 1rem;
-    background-image: url('/img/jumbotron-background.jpg');
+    background-image: url('../img/jumbotron-background.jpg');
     background-position: center;
     background-repeat: no-repeat;
 }

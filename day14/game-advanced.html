@@ -1,0 +1,50 @@
+<html>
+<body>
+<div id="square"></div>
+
+
+</body>
+<script>
+    var square = document.getElementById('square');
+
+    square.style.width = "100px";
+    square.style.height = "100px";
+    square.style.background = "#f00";
+    square.style.position = "absolute";
+    square.style.left = ((window.innerWidth - 100) / 2) + "px";
+    square.style.top = ((window.innerHeight - 100) / 2) + "px";
+
+
+
+    var moveRightInterval;
+    var moveLeftInterval;
+
+    document.addEventListener('keydown', keyDown);
+
+    function keyDown(event){
+        if(event.key == "ArrowRight"){
+            moveRightInterval = setInterval(moveRight, 10);
+        }else if(event.key == "ArrowLeft"){
+            moveLeftInterval = setInterval(moveLeft, 10);
+        }
+    }
+
+    document.addEventListener('keyup', keyUp);
+
+    function keyUp(){
+        if(event.key == "ArrowRight"){
+            clearInterval(moveRightInterval);
+        }else if(event.key = "ArrowLeft"){
+            clearInterval(moveLeftInterval);
+        }
+    }
+
+    function moveRight(){
+        square.style.left = (parseInt(square.style.left) + 2 ) + 'px';
+    }
+
+    function moveLeft(){
+        square.style.left = (parseInt(square.style.left) - 2 ) + 'px';
+    }
+</script>
+</html>

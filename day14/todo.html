@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://todomvc.com/examples/vanilla-es6/node_modules/todomvc-common/base.css">
+    <link rel="stylesheet" href="http://todomvc.com/examples/vanilla-es6/node_modules/todomvc-app-css/index.css">
+    <title>Lecture 01</title>
+</head>
+<body>
+<section class="todoapp">
+    <header class="header">
+        <h1>todos</h1>
+        <input class="new-todo" placeholder="What needs to be done?" autofocus>
+    </header>
+    <section class="main">
+        <input class="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list">
+
+        </ul>
+    </section>
+</section>
+
+<footer class="info">
+    <p>Double-click to edit a todo</p>
+    <p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
+    <p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script>
+    /*
+     Template:
+
+     place into .todo-list
+
+     <li class="completed">
+         <div class="view">
+             <input class="toggle" type="checkbox" checked>
+             <label>aaa</label>
+             <button class="destroy"></button>
+         </div>
+     </li>
+     */
+
+    var todos = [
+        { text: 'Buy milk', completed: true  },
+        { text: 'Complete challenge for CBP', completed: false },
+        { text: 'Learn more about JS & jQuery', completed: false },
+    ];
+
+
+    var i = 0;
+
+    while( i < todos.length){
+        console.log(todos[i].text, todos[i].completed);
+
+        //https://pastebin.com/6cy33yjV
+
+        var completed = '';
+        var checked = '';
+
+        if(todos[i].completed){
+            completed = 'completed';
+            checked = 'checked';
+        }
+
+        $('ul.todo-list').append(
+            '<li class="' + completed + '">'+
+                '<div class="view">'+
+                    '<input class="toggle" type="checkbox" ' + checked + '>'+
+                    '<label>' + todos[i].text + '</label>'+
+                    '<button class="destroy"></button>'+
+                '</div>'+
+            '</li>'
+        );
+
+        i++;
+    }
+
+
+</script>
+
+</body>
+</html>

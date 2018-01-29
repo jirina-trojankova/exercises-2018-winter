@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript basics</title>
+</head>
+<body>
+    
+    <script>
+console.log(123);
+console.log(typeof 123);
+
+console.log('123');
+console.log(typeof '123');
+
+var name = 'Honza';
+console.log(name);
+
+var age = 35;
+console.log(age);
+
+function logName() {
+    console.log('Honza');
+}
+
+logName();
+
+function log(value) {
+    // value is created
+    console.log( value );
+    console.log(age);
+    // value is destroyed
+
+    var foo = 'bar';
+
+    var my_function = function() {
+        console.log(foo);
+    }
+
+}
+
+
+
+function log2() {
+    // does not know foo
+}
+
+log(name);
+log(age);
+log('Hooray!');
+
+
+function sayHello() {
+    return 'hello';
+}
+
+sayHello();
+
+function getType(value) {
+    return typeof value;
+}
+
+console.log( getType(name) );
+// console.log( 'string' );
+var type = getType(name);
+
+var type_of_type = 'string';
+
+console.log(1+1);
+console.log('1'+'1');
+
+
+var number = 0;
+console.log(number++);
+
+number = 0;
+console.log(++number);
+
+age = 35;
+// birthday
+age = age + 1; // 36
+age += 1; // equivalent to above, 37
+
+age -= 1; // 36
+
+age %= 10; // 6
+console.log(age);
+
+// element.innerHTML = 'something';
+
+// number = 1;
+// number = number++;
+
+// what is number now
+
+
+
+
+
+
+var click_count = 0;
+function buttonClicked(button) {
+    button.innerHTML = 'This button has been clicked ' + ++click_count + ' times'
+}
+    </script>
+
+<button onclick="buttonClicked(this);">This button has been clicked 0 times</button>
+
+</body>
+</html>

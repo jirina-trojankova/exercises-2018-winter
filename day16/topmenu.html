@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topmenu</title>
+
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+    <style>
+body {
+    height: 200em;
+}
+#topmenu {
+    height: 5em;
+    background-color: #666666;
+    color: #ffffff;
+}
+#topmenu.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="topmenu"></div>  
+
+    <script>
+
+$(window).on('scroll', function(ev) {
+
+    // if window position from top is > 80
+    if($(window).scrollTop() > 80) {
+
+        // add a class fixed onto the topmenu
+        $('#topmenu').addClass('fixed');
+
+    // otherwise
+    } else {
+
+        // remove the class fixed from the topmenu
+        $('#topmenu').removeClass('fixed');
+    }
+
+});
+
+    </script>
+
+</body>
+</html>

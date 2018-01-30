@@ -1,0 +1,12 @@
+.progress-bar {
+    font-size: 1.2rem;
+
+    strong,
+    span  {
+        line-height: 2rem; // equal to progress-bar height set via inline style
+    }
+
+    strong {
+        width: 6em;
+    }
+}

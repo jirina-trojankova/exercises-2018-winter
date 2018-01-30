@@ -1,0 +1,14 @@
+.form-group {
+    color: $white;
+}
+
+input.form-control { // don’t apply to textarea
+    flex: 1;
+    width: auto;
+    font-size: 1.2em;
+
+    &:focus {
+        color: inherit; // white, override default
+        outline: 2px solid rgba(255,255,255, 0.6);
+    }
+}

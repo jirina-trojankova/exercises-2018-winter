@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="jquery.appear.js"></script>
+</head>
+<body>
+	<div class="progress">
+		<div id="bar1" class="bar"></div>
+		<div id="bar2" class="bar"></div>
+		<div id="bar3" class="bar"></div>
+		<div id="bar4" class="bar"></div>
+	</div>
+
+	<script>
+		$('.progress').appear();
+
+		function progress(barID, value) {
+			$(barID).animate({'width': value}, 500);
+		}
+
+		$('.progress').on('appear', function() {
+			progress('#bar1', '50%');
+			progress('#bar2', '75%');
+			progress('#bar3', '40%');
+			progress('#bar4', '95%');
+		});
+	</script>
+</body>
+</html>

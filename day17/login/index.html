@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="page-heading">
+		My Great Company
+	</div>
+	<div class="login-wrapper">	
+		<div class="login">
+			<div class="login-heading">
+				Customer login
+			</div>			
+			<div class="input-row">
+				<div class="icon user"></div>
+				<input class="field" id="user" type="text" />
+			</div>
+			<div class="input-row">
+				<div class="icon lock"></div>
+				<input class="field" id="password" type="password" />
+			</div>
+			<button class="login-button">
+				Login
+			</button>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		var num = 1;
+		var name = 'martin';
+		var fn = function() {
+			return 'hello';
+		}
+		
+
+		var person = {
+			'first': 'Homer',
+			'last': 'Simpson',
+			'gander': 'male',
+			'age': 39,
+			'wife': {
+				'first_name': 'Marge',
+				'last': 'Simpson',
+				'age': 36
+			}
+		}
+		
+		var list = [person, 2, 3, 4, 5];
+
+		list[0]['wife']['first_name']
+		console.log(list);		
+		
+		var array = [1, 2, 3];
+
+		var array = {
+			0: 1, 
+			1: 2, 
+			2: 3
+		};
+		
+		var book = {
+			'title': 'My Title',
+			'authors': ['John Doe', 'G.I.Jane'],
+			'editions': [
+				{'year': 1991, 'pages': 321},
+				{'year': 1995, 'pages': 324},
+				{'year': 2000, 'pages': 351}
+			], 
+			'borrowed': true
+		};
+
+		var users {
+			'podlomar': {'first': 'Martin', 'last': 'Podloucký'},
+			'john28': {'first': 'John', 'last': 'Doe'},
+			'jane': {'first': 'Jane', 'last': 'Austin'},
+		}
+
+		var login = $('input').val();
+
+		if ( users[login] !== undefined) {
+
+		}
+		
+		users[login].first
+		
+		
+		
+		
+		function apply(fn, val) {
+			return fn(val);
+		}
+
+		var greet = function(name) {
+			return 'Hello ' + name;
+		}
+
+		console.log(
+			apply(function(name) { 
+				return 'Hello' + name
+			}, 'Martin')
+		);
+
+		$('.login-button').click(
+			function () {
+				var user = $('#user').val();
+				var password = $('#password').val();
+
+				if (user !== 'john') {
+					$('#user').addClass('error');
+				} else {
+					$('#user').removeClass('error');
+				}
+			}
+		);
+
+		document.getElementById('p').innerHTML = 'hello';
+		$('p').html('hello');
+		$('p').on('click', function() {
+
+		});
+
+	</script>
+</body>
+</html>

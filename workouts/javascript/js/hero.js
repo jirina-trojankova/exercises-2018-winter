@@ -1,4 +1,6 @@
 function placeHero(x, y) {
+    x = Math.max(0, Math.min(x, 350)); // make sure that x is between 0 and 350
+    y = Math.max(0, Math.min(y, 350));
     var hero = document.getElementById('hero');
     hero.style.left = x + 'px';
     hero.style.top = y + 'px';

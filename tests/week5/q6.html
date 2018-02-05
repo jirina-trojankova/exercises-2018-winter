@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 6</title>
+
+</head>
+<body>
+
+    <button id="move" onclick="document.getElementById('box').style.left = (parseInt(document.getElementById('box').style.left) + 20) + 'px';">MOVE!</button>
+
+    <div id="box" style="position: relative; left: 0; top: 0; background: red; height: 2em; width: 2em"></div>
+    
+    <script>
+        // your code here...
+        var button = document.getElementById('move'),
+            box = document.getElementById('box');
+            
+        button.addEventListener('click', function() {
+            box.style.top = (parseInt(box.style.top) + 20) + 'px';
+        });
+
+    </script>
+</body>
+</html>

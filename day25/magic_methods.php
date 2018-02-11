@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 
 class shopping_item
 {
-	public $price = null;
-	public $name = '';
+	public $name = null;
+	public $data = [];
 	
 	public function __construct($name)
 	{
@@ -15,17 +15,15 @@ class shopping_item
 	
 	public function __set($name, $value)
 	{
-		echo 'method set';
 		if ($name == 'price') {
-			$this->price = round(floatval($value), 2);
+			$this->data[$name] = round(floatval($value), 2);
 		}
 	}
 	
 	public function __get($name)
-	{		return 'method get';
-		
+	{
 		if ($name == 'price') {
-			return number_format(floatval($this->price), 2);
+			return number_format(floatval($this->data[$name]), 2);
 		}
 	}
 	

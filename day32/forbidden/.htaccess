@@ -1,0 +1,2 @@
+# deny any access to this folder and subfolders
+Deny from all

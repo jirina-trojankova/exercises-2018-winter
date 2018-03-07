@@ -18,7 +18,7 @@
 		url: 'https://classes.codingbootcamp.cz/assets/classes/602/guardian.php',
 		success: function(data, status) {
 			console.log('status:', status);
-			console.log(data.data);
+			console.log(data);
 			for (i=0; i < data.data.length; i++)
 			{
 				document.write(data.data[i] + "<br>");

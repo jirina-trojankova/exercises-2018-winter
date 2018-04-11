@@ -1,0 +1,18 @@
+2 ways of sending form in portfolio page
+----------------------------------------
+1) put the PHP code to handle the submitted data
+   at the TOP of your index.php and submit the
+   form to the same page ( action="" )
+
+2) put the PHP code to handle the submitted data
+   into a NEW PHP file, submit the form to this 
+   new file ( action="my_form_handler.php" ) and
+   after the data has been handled (in the PHP file)
+   REDIRECT back to your portfolio homepage 
+   (index.html)
+
+   <?php
+
+   // redirects to index.html
+   header("Location: index.html");
+   exit(); // script ends here

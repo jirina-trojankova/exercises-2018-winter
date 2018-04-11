@@ -1,0 +1,30 @@
+.side {
+	width: 338px;
+	height: 338px;
+	background-color: lightgray;
+	margin: 150px auto;
+}
+
+.side1 {
+	background-image: url('img/side1.png');
+}
+
+.side2 {
+	background-image: url('img/side2.png');
+}
+
+.side3 {
+	background-image: url('img/side3.png');
+}
+
+.side4 {
+	background-image: url('img/side4.png');
+}
+
+.side5 {
+	background-image: url('img/side5.png');
+}
+
+.side6 {
+	background-image: url('img/side6.png');
+}

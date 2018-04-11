@@ -1,0 +1,29 @@
+*  {
+    box-sizing: border-box;
+}
+
+#board {
+    font-size: 0.6em;
+    box-sizing: content-box;
+    border: 1px solid black;
+    width: 42em;
+    height: 42em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#board .square {
+    width: 3em;
+    height: 3em;
+    /* border: 1px solid silver; */
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    transition: transform 300ms linear,
+                background-color 0s 150ms;
+}
+#board .square.changed {
+    transform: rotateY(180deg);
+}

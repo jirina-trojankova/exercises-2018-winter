@@ -1,0 +1,24 @@
+section {
+    padding-top: 3*$spacer;
+    padding-bottom: 3*$spacer;
+
+    main > &,
+    footer > & {
+        border-left: 2px solid rgba(180,180,180,0.4);
+        border-right: 2px solid rgba(180,180,180,0.4);
+    }
+
+    footer > & {
+        padding: 3vw 6vw;
+    }
+
+    &.bg-primary,
+    &.bg-white {
+        padding-right: map-get($spacers,5); // equal to .pr-5 class;
+        padding-left: map-get($spacers,5); // equal to .pl-5 class;
+    }
+}
+
+.mp-claim {
+    font-size: 1.5rem;
+}

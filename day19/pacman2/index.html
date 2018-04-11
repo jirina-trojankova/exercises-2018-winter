@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="style.css">
+	<title>Pacman</title>
+</head>
+<body>
+	<div id="pacs">
+	</div>
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="pacman.js"></script>
+	<script>
+		
+		var pacman1 = new Pacman(
+			'green', 'martin', 3, 2, 'open', 'down');
+
+		pacman1.createHTML();
+		pacman1.updateHTML();
+		
+		$(document).keydown(function(e) {
+			if(e.keyCode === 39) {
+				pacman1.step('right');
+			} else if(e.keyCode === 37) {
+				pacman1.step('left');
+			} else if(e.keyCode === 38) {
+				pacman1.step('up');
+			} else if(e.keyCode === 40) {
+				pacman1.step('down');
+			}
+		});
+		
+</script>
+</body>
+</html>

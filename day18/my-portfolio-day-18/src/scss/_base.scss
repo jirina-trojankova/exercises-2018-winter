@@ -1,0 +1,20 @@
+h1,
+h2 {
+    margin-bottom: 2*$spacer;
+    text-transform: uppercase;
+    text-align: center;
+
+    .bg-dark &,
+    .bg-primary &,
+    .jumbotron & {
+        color: $white;
+    }
+
+    .card & {
+        color: inherit;
+    }
+
+    .jumbotron & {
+        text-transform: none;
+    }
+}

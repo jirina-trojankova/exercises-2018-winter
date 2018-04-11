@@ -1,0 +1,10 @@
+// Custom CSS rules to override Bootstrap
+// Use as a last resort, when redeclaring variables in _custom-variables.scss is not enough.
+
+@import 'base';
+@import 'sections';
+@import 'navbar';
+@import 'jumbotron';
+@import 'my-skills';
+@import 'contact';
+@import 'footer';

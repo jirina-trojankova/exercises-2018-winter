@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding-top: 1000px;
+}
+
+#square {
+	position: relative;
+	left: 0px;
+	width: 250px;
+	height: 250px;
+	background-color: darkgoldenrod;
+	margin: 20px;
+}
+
+.progress {
+	width: 100%;
+	padding: 20px;
+	background-color: lightgray;
+}
+
+.bar {
+	width: 0%;
+	height: 2rem;
+	background-color: darkolivegreen;
+	margin-bottom: 15px;
+}
+

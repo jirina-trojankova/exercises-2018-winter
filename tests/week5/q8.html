@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 8</title>
+
+    <style>
+        #board {
+            display: flex;
+            flex-flow: row wrap;
+            width: 20em;
+            height: 20em;
+        }
+        #board .square {
+            box-sizing: border-box;
+            width: 2em;
+            height: 2em;
+            border: 1px solid #ffffff;
+            background-color: #e7e7e7;
+            transition: background-color 0.5s ease;
+        }
+        #board .square.highlighted {
+            background-color: rgb(64, 196, 206);
+        }
+    </style>
+
+    <!-- add jQuery to the page -->
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="board">
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    </div>
+    
+    <script>
+        // your code here...
+        function highlight(element) {
+            $(element).addClass('highlighted');
+        }
+
+        // attach an event listener onto all the elements with class square, listening for the event mouseover
+        $('.square').on('mouseover', function(event) {
+            highlight(this);
+        });
+        $('.square').mouseover(function(event) {
+            highlight(this);
+        });
+        
+        // plain JS
+        // var squares = document.getElementsByClassName('square');
+        // console.log(squares);
+        // for (var i = 0; i < squares.length; i++) {
+        //     squares[i].addEventListener('mouseover', function(event) {
+        //         highlight(event.target);
+        //     });
+        // }
+    </script>
+
+</body>
+</html>

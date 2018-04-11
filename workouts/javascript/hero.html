@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A hero's story</title>
+
+    <link rel="stylesheet" href="css/hero.css">
+</head>
+<body>
+    
+    <div id="map">
+        <div id="hero"></div>
+
+    </div>
+
+    <div id="buttons">
+        <button onclick="placeHero(hero_x, hero_y - 50);">&uArr;</button>
+        <button onclick="placeHero(hero_x, hero_y + 50);">&dArr;</button>
+        <button onclick="placeHero(hero_x - 50, hero_y);">&lArr;</button>
+        <button onclick="placeHero(hero_x + 50, hero_y);">&rArr;</button>
+    </div>
+
+    <script src="js/hero.js"></script>
+</body>
+</html>

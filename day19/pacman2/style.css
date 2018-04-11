@@ -1,0 +1,62 @@
+body {
+	background-image: url('img/tile-empty.png');
+	margin: 0;
+	padding: 0; 
+}
+
+.pacman {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+}
+
+.open-right {
+	background-image: url('img/popen-right.png');
+}
+
+.open-left {
+	background-image: url('img/popen-left.png');
+}
+
+.open-up {
+	background-image: url('img/popen-up.png');
+}
+
+.open-down {
+	background-image: url('img/popen-down.png');
+}
+
+.close-right {
+	background-image: url('img/pclosed-right.png');
+}
+
+.close-left {
+	background-image: url('img/pclosed-left.png');
+}
+
+.close-up {
+	background-image: url('img/pclosed-up.png');
+}
+
+.close-down {
+	background-image: url('img/pclosed-down.png');
+}
+
+.wall {
+	position: absolute;
+	background-image: url('img/tile-wall.png');
+}
+
+.apple {
+	position: absolute;
+	background-image: url('img/apple.png');
+	width: 64px;
+	height: 64px;
+}
+
+.bomb {
+	position: absolute;
+	background-image: url('img/bomb.png');
+	width: 64px;
+	height: 64px;
+}
